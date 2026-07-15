@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SLAM GYM</title>
+<link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+
+
+    
+
+<header>
+    <div class="logo">Slam Gym</div>
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Programs</a></li>
+            <li><a href="#">Trainers</a></li>
+            <li><a href="#">Membership</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Carousel -->
+<section class="slider">
+    <img id="slide" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438">
+</section>
+
+<!-- Services -->
+<section class="services">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b">
+<h3>Strength Training</h3>
+<p>Build muscles with professional equipment.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1518611012118-696072aa579a">
+<h3>Cardio</h3>
+<p>Improve endurance and heart health.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd">
+<h3>Yoga</h3>
+<p>Relax your body and mind.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48">
+<h3>CrossFit</h3>
+<p>High intensity functional workouts.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1517963879433-6ad2b056d712">
+<h3>Personal Training</h3>
+<p>One-on-one coaching.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f">
+<h3>Nutrition</h3>
+<p>Healthy diet guidance.</p>
+</div>
+
+</section>
+
+<section class="hero">
+
+    <div class="overlay"></div>
+
+    <div class="form-box">
+        <h1>Franchise Opportunities</h1>
+
+        <form id="Enquire_form">
+            <input type="text" id="form_name" placeholder="Name*" required>
+
+            <input type="email" id="form_email" placeholder="Email*" required>
+
+            <div class="phone-box">
+                
+                <input type="tel" placeholder="Phone Number" id="form_ph">
+            </div>
+
+            <textarea placeholder="Detail Message" id="form_msg"></textarea>
+
+            <button type="submit">Enquire</button>
+        </form>
+    </div>
+
+</section>
+
+
+<footer>
+<p>© 2026 SLAM GYM | Stay Strong 💪</p>
+</footer>
+
+<script>
+const images=[
+"https://images.unsplash.com/photo-1517836357463-d25dfeac3438",
+"https://images.unsplash.com/photo-1534438327276-14e5300c3a48",
+"https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b",
+"https://images.unsplash.com/photo-1518611012118-696072aa579a",
+"https://images.unsplash.com/photo-1517838277536-f5f99be501cd"
+];
+
+let index=0;
+
+setInterval(()=>{
+index=(index+1)%images.length;
+document.getElementById("slide").src=images[index];
+},3000);
+
+
+
+var form_enq =  document.getElementById("Enquire_form");
+
+form_enq.addEventListener('submit' , (event) => {
+    event.preventDefault();
+
+    var fname = document.getElementById('form_name').value;
+    
+    var femail = document.getElementById('form_email').value;
+    
+    var fph = document.getElementById('form_ph').value;
+    
+    var fmsg = document.getElementById('form_msg').value;
+
+    console.log("name " + fname +" email" + femail +" ph " +fph +" message" + fmsg)
+})
+
+
+
+</script>
+
+</body>
+</html>
